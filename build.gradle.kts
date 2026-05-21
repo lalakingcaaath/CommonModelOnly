@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.jimac.common_model"
+    namespace = "com.jimac.common_modela"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
