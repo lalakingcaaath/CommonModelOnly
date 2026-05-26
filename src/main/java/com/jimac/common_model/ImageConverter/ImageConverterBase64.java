@@ -1,4 +1,4 @@
-package com.jimac.common_model;
+package com.jimac.common_model.ImageConverter;
 
 import android.content.Context;
 import android.graphics.Bitmap;

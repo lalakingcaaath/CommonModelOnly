@@ -1,0 +1,28 @@
+Image Conversion Flow
+Step 1: User picks image
+
+User clicks "Pick Image" button or the ImageView
+ActivityResultLauncher opens image picker with MIME type "image/*"
+Step 2: File size validation
+
+ImageConverterBase64.getFileSizeFromUri() checks file size
+Rejects images larger than 2MB
+Step 3: Get bitmap from URI
+
+ImageConverterBase64.getBitmapFromUri() converts URI to Bitmap using MediaStore.Images.Media.getBitmap()
+Step 4: Display image
+
+Bitmap is set to ImageView
+"Pick Image" button is hidden
+Step 5: Convert to base64
+
+ImageConverterBase64.convertUriToBase64() handles the conversion:
+Gets bitmap from URI
+Resizes bitmap to max 100px dimension
+Compresses to JPEG at 60% quality
+Encodes to base64 string with NO_WRAP flag
+Base64 string is stored in vehicleTypeModel.imageBase64
+Step 6: Display existing images
+
+When loading existing data, ImageConverterBase64.base64ToBitmap() decodes base64 back to Bitmap
+Resizes to 500px width for display
