@@ -5,17 +5,17 @@ import android.net.Uri;
 import java.io.Serializable;
 
 public class AddParkerTypeModel implements Serializable {
-    public String name;
+    public String code;
     public String description;
     public String action;
     public String imageBase64;
 
-    public String getName() {
-        return name;
+    public String getCode() {
+        return code;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getDescription() {
